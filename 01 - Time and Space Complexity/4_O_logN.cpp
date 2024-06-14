@@ -11,7 +11,7 @@ int main()
     // {
     //     int digit = n % 10;
     //     cout << digit << endl;
-    //     n /= 10;
+    // n /= 10; // n = n / 10;
     // }
     // output
     // 4
@@ -22,7 +22,7 @@ int main()
     // 4
     // 5
 
-    for (int i = 1; i <= n; i = i * 2)
+    for (int i = 1; i <= n; i = i * 2) // O(logN)
     {
         cout << i << endl;
     }
