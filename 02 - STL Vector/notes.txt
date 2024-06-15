@@ -14,4 +14,14 @@ Basic Data-structure
 
 ডাটাস্ট্রাকচার কিন্তু মোটেও খুব সহজ কোন সাবজেক্টনা। তবে আমরা ট্রাই করতেছি এটা যেন ইন্টারেস্টিং ভাবে বিগিনার ফ্রেন্ডলি উপায়ে রিপ্রেজেন্ট করা যায়। তোমাদেরও পূর্ন মনোযোগ এবং এফোর্ড দিয়ে কোর্সটা শুরু থেকেই কন্টিনিউ করে যেতে হবে। রেগুলারিটি মেন্টেইন কর‍তে হবে। তাইলে দেখবা একটা সময় গিয়ে সহজ হয়ে গেছে জিনিসগুলো।
 
-Vector Built-in Functions: https://docs.google.com/document/d/1-AlWED5nChiMx4iqH_E-dCTgZn2EmzpB1THvfw-L7pM/edit?usp=drivesdk
+
+Vector Built-in Functions: 
+https://docs.google.com/document/d/1-AlWED5nChiMx4iqH_E-dCTgZn2EmzpB1THvfw-L7pM/edit?usp=drivesdk
+
+
+github link: 
+https://github.com/phitronio/Batch-5-Basic-Data-Structures
+
+
+Exercise (Optional) - 
+https://docs.google.com/document/d/1dQgKdPZjz3DBWvBM5cGOK0_Capw2va0U7G7NDktEsw4/edit?usp=sharing
