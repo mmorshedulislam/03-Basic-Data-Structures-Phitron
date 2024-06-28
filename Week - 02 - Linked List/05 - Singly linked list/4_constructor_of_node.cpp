@@ -20,9 +20,10 @@ int main()
 
     a.next = &b;
 
-    cout << a.val << endl;
-    cout << b.val << endl;
-    cout << (*a.next).val << endl;
-    cout << a.next->val << endl;
+    cout << a.val << endl;         // 10
+    cout << b.val << endl;         // 30
+    cout << (*a.next).val << endl; // 30
+    cout << a.next->val << endl;   // 30
+
     return 0;
 }

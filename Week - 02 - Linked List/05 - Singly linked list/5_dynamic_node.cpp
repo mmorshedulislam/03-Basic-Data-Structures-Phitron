@@ -21,8 +21,11 @@ int main()
 
     head->next = a;
 
-    cout << head->val << endl;
-    cout << a->val << endl;
-    cout << head->next->val << endl;
+    cout << a << endl;  // 0x10f9fa0
+    cout << &a << endl; // 0x61ff08
+
+    cout << head->val << endl;       // 10
+    cout << a->val << endl;          // 20
+    cout << head->next->val << endl; // 20
     return 0;
 }

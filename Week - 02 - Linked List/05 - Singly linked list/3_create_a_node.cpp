@@ -18,9 +18,9 @@ int main()
     b.val = 20;
     b.next = NULL;
 
-    cout << a.val << endl;
-    cout << b.val << endl;
-    cout << (*a.next).val << endl;
-    cout << a.next->val << endl;
+    cout << a.val << endl; // 10
+    cout << b.val << endl; // 20
+    cout << (*a.next).val << endl; // 20
+    cout << a.next->val << endl; // 20
     return 0;
 }
