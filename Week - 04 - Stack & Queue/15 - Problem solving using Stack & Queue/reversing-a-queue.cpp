@@ -1,12 +1,14 @@
-#include <bits/stdc++.h> 
+#include <bits/stdc++.h>
 queue<int> reverseQueue(queue<int> q)
 {
-    stack <int>s;
-    while(!q.empty()){
+    stack<int> s;
+    while (!q.empty())
+    {
         s.push(q.front());
         q.pop();
     }
-    while(!s.empty()){
+    while (!s.empty())
+    {
         q.push(s.top());
         s.pop();
     };
