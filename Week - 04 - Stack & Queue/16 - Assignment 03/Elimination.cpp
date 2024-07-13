@@ -5,51 +5,33 @@ int main()
 {
     int t;
     cin >> t;
+
     while (t--)
     {
+        stack<char> stk;
         string s;
         cin >> s;
 
-        bool found = true;
-        stack<int> st;
-
         for (char c : s)
         {
-            if (c == '0')
+            if (!stk.empty())
             {
-                st.push(c);
-            }
-            else
-            {
-                if (st.empty())
+                if (c == '1' && stk.top() == '0')
                 {
-                    found = false;
-                    break;
+                    stk.pop();
                 }
                 else
                 {
-                    if ((c == '1' && st.top() == '0'))
-                    {
-                        st.pop();
-                    }
-                    else
-                    {
-                        found = false;
-                    }
+                    stk.push(c);
                 }
+            }
+            else
+            {
+                stk.push(c);
             }
         }
 
-        if (st.empty())
-        {
-            found = true;
-        }
-        else
-        {
-            found = false;
-        }
-
-        if (found)
+        if (stk.empty())
         {
             cout << "YES" << endl;
         }

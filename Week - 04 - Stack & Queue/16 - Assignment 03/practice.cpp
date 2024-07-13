@@ -3,33 +3,41 @@ using namespace std;
 
 int main()
 {
-    queue<string> que;
+    int t;
+    cin >> t;
 
-    int q;
-    cin >> q;
-
-    while (q--)
+    while (t--)
     {
-        int cmd;
-        string arg;
-        cin >> cmd;
+        stack<char> stk;
+        string s;
+        cin >> s;
 
-        if (cmd == 0)
+        for (char c : s)
         {
-            cin >> arg;
-            que.push(arg);
-        }
-        else if (cmd == 1)
-        {
-            if (!que.empty())
+            if (!stk.empty())
             {
-                cout << que.front() << endl;
-                que.pop();
+                if (c == '1' && stk.top() == '0')
+                {
+                    stk.pop();
+                }
+                else
+                {
+                    stk.push(c);
+                }
             }
             else
             {
-                cout << "Invalid" << endl;
+                stk.push(c);
             }
+        }
+
+        if (stk.empty())
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
         }
     }
 
