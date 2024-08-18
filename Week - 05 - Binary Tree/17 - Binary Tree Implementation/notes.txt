@@ -1,6 +1,15 @@
-Linier -> Array, Linked list
-Non-Linier -> Tree
+Linier DS -> Array, Linked list
+Non-Linier DS -> Tree
 
-Order -> 1. Depth, 2. Level
+Order-> 1. Depth, 
+        2. Level
 
-1. Depth -> 1. Pre Order, 2. Post Order, 3. In Order
+1. Depth -> 1. Pre Order, 
+            2. Post Order, 
+            3. In Order
+
+1. Pre Order -> root->left->right
+
+2. Post Order -> left->right->root;
+
+3. In Order -> left->root->right
