@@ -59,13 +59,19 @@ Node *input_tree()
             q.push(p->left);
         if (p->right)
             q.push(p->right);
-
-        return root;
     };
+
+    return root;
 };
 
 void level_order(Node *root)
 {
+    if (root == NULL)
+    {
+        cout << "No Tree Found!" << endl;
+        return;
+    }
+    
     queue<Node *> q;
     q.push(root);
 
@@ -88,9 +94,11 @@ void level_order(Node *root)
 
 int main()
 {
-    // Initialize
-    Node *root = input_tree();
-    level_order(root);
+    // input
+    Node *root = input_tree(); // 10 20 60 30 50 70 -1 -1 40 -1 -1 -1 -1 80 -1 -1 -1
+
+    // print
+    level_order(root); // 10 20 60 30 50 70 40 80
 
     return 0;
 }

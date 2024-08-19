@@ -18,6 +18,12 @@ public:
 
 void level_order(Node *root)
 {
+    if (root == NULL)
+    {
+        cout << "No Tree Found!" << endl;
+        return;
+    }
+
     queue<Node *> q;
     q.push(root);
 
