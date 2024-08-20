@@ -46,6 +46,7 @@ Node *input_tree()
             myLeft = NULL;
         else
             myLeft = new Node(l);
+            
         if (r == -1)
             myRight = NULL;
         else

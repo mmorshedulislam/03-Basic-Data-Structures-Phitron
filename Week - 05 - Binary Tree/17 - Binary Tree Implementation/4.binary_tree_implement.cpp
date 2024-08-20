@@ -36,10 +36,10 @@ int main()
     a->left = c;
     a->right = h;
     c->right = e;
-    h->right i;
+    h->right = i;
     b->right = d;
     d->left = f;
-    d->right = j;
+    d->right = g;
 
     return 0;
 }
