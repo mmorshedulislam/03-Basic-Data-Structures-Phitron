@@ -70,7 +70,7 @@ int main()
     h->right = i;
 
     // print level_order
-    level_order(root); //
+    level_order(root); // 10 20 30 40 90 50 60 100 70 80
 
     return 0;
 }

@@ -29,18 +29,47 @@ void in_order(Node *root)
 {
     if (root == NULL)
         return;
-    pre_order(root->left);
+    in_order(root->left);
     cout << root->val << " ";
-    pre_order(root->right);
+    in_order(root->right);
 }
 
 void post_order(Node *root)
 {
     if (root == NULL)
         return;
-    pre_order(root->left);
-    pre_order(root->right);
+    post_order(root->left);
+    post_order(root->right);
     cout << root->val << " ";
+}
+
+void level_order(Node *root)
+{
+    if (root == NULL)
+    {
+        cout << "No root found";
+        return;
+    }
+
+    queue<Node *> q;
+    q.push(root);
+
+    while (!q.empty())
+    {
+        Node *f = q.front();
+        q.pop();
+
+        cout << f->val << " ";
+
+        if (f->left)
+        {
+            q.push(f->left);
+        }
+        if (f->right)
+        {
+            q.push(f->right);
+        }
+    }
 }
 
 int main()
@@ -66,20 +95,25 @@ int main()
     d->left = f;
     d->right = g;
 
-    // cout << "Pre order: ";
-    // pre_order(root);
-    // cout << endl
-    //      << endl;
+    cout << "Pre order: ";
+    pre_order(root);
+    cout << endl
+         << endl;
 
     cout << "In order: ";
     in_order(root);
     cout << endl
          << endl;
 
-    // cout << "Post order: ";
-    // post_order(root);
-    // cout << endl
-    //      << endl;
+    cout << "Post order: ";
+    post_order(root);
+    cout << endl
+         << endl;
+
+    cout << "Level order: ";
+    level_order(root);
+    cout << endl
+         << endl;
 
     return 0;
 }
