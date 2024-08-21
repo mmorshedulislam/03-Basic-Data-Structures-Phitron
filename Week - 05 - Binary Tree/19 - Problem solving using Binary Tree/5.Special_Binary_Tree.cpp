@@ -1,38 +1,31 @@
-/************************************************************
+#include <bits/stdc++.h> 
+/*************************************************************
 
-    Following is the TreeNode class structure:
+    Following is the Binary Tree node structure
 
-    template <typename T>
+    class BinaryTreeNode
+    {
+    public :
+        T data;
+        BinaryTreeNode<T> *left;
+        BinaryTreeNode<T> *right;
 
-    class TreeNode {
-    public:
-        T val;
-        TreeNode<T> *left;
-        TreeNode<T> *right;
-        TreeNode(T val) {
-            this->val = val;
+        BinaryTreeNode(T data) {
+            this -> data = data;
             left = NULL;
             right = NULL;
         }
     };
 
-************************************************************/
-#include <bits/stdc++.h>
-vector<int> reverseLevelOrder(TreeNode<int> *root){
+*************************************************************/
+
+bool isSpecialBinaryTree(BinaryTreeNode<int>* root)
+{
     // Write your code here.
-    queue<TreeNode<int>*> q;
-    vector <int> v;
-    
-    if (root) q.push(root);
-    while (!q.empty()) {
-        TreeNode<int> * node = q.front();
-        q.pop();
-
-        v.push_back(node->val);
-
-        if (node->left) q.push(node->left);
-        if (node->right) q.push(node->right);
-    }
-    reverse(v.begin(), v.end());
-    return v;
+    if (root->left == NULL && root->right == NULL) return true;
+    if (root->left == NULL || root->right == NULL) return false;
+    bool l = isSpecialBinaryTree(root->left);
+    bool r = isSpecialBinaryTree(root->right);
+    if (l==false || r==false) return false;
+    return true;
 }
