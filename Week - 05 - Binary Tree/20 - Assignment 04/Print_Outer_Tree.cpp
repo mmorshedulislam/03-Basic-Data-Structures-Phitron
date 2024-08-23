@@ -66,9 +66,65 @@ Node *input_tree()
     return root;
 };
 
+vector<int> vl;
+vector<int> vr;
+
+void left_order_count(Node *root)
+{
+
+    if (root == NULL)
+        return;
+    if (root->left == NULL && root->right == NULL)
+    {
+        vl.push_back(root->val);
+    }
+    else
+    {
+        left_order_count(root->left);
+        if (root->left == NULL)
+        {
+            left_order_count(root->right);
+        }
+        vl.push_back(root->val);
+    }
+};
+
+void right_order_count(Node *root)
+{
+
+    if (root == NULL)
+        return;
+    if (root->left == NULL && root->right == NULL)
+    {
+        vr.push_back(root->val);
+    }
+    else
+    {
+        right_order_count(root->right);
+        if (root->right == NULL)
+        {
+            right_order_count(root->left);
+        }
+        vr.push_back(root->val);
+    }
+};
+
 int main()
 {
     Node *root = input_tree();
+    left_order_count(root->left);
+    right_order_count(root->right);
 
+    for (int i : vl)
+    {
+        cout << i << " ";
+    }
+    cout << root->val << " ";
+    
+    reverse(vr.begin(), vr.end());
+    for (int i : vr)
+    {
+        cout << i << " ";
+    }
     return 0;
 }
