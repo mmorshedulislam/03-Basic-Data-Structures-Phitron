@@ -15,8 +15,6 @@ public:
     }
 };
 
-int sum = 0;
-
 Node *input_tree()
 {
     int val;
@@ -67,6 +65,8 @@ Node *input_tree()
     return root;
 };
 
+vector<int> v;
+
 void pre_order(Node *root)
 {
     if (root == NULL)
@@ -74,10 +74,10 @@ void pre_order(Node *root)
 
     pre_order(root->right);
     pre_order(root->left);
-    
+
     if (root->left == NULL && root->right == NULL)
     {
-        cout << root->val << " ";
+        v.push_back(root->val);
     }
 };
 
@@ -87,6 +87,13 @@ int main()
     Node *root = input_tree();
 
     pre_order(root);
+
+    sort(v.rbegin(), v.rend());
+
+    for (int i : v)
+    {
+        cout << i << " ";
+    }
 
     return 0;
 }
