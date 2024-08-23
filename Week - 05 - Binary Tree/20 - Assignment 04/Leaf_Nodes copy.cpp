@@ -67,6 +67,31 @@ Node *input_tree()
     return root;
 };
 
+vector<int> v;
+
+void level_order(Node *root)
+{
+    queue<Node *> q;
+    if (root)
+        q.push(root);
+
+    while (!q.empty())
+    {
+        Node *f = q.front();
+        q.pop();
+
+        if (f->left == NULL && f->right == NULL)
+        {
+            v.push_back(f->val);
+        }
+
+        if (f->right)
+            q.push(f->right);
+        if (f->left)
+            q.push(f->left);
+    }
+}
+
 void pre_order(Node *root)
 {
     if (root == NULL)
@@ -74,19 +99,25 @@ void pre_order(Node *root)
 
     pre_order(root->right);
     pre_order(root->left);
-    
     if (root->left == NULL && root->right == NULL)
     {
-        cout << root->val << " ";
+        v.push_back(root->val);
     }
 };
 
 int main()
 {
+    v.clear();
 
     Node *root = input_tree();
+    // level_order(root);
 
     pre_order(root);
+
+    for (int i : v)
+    {
+        cout << i << " ";
+    }
 
     return 0;
 }
