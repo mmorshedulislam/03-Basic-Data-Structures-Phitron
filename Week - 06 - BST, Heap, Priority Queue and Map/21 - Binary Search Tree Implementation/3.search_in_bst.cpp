@@ -65,7 +65,7 @@ Node *input_tree()
     return root;
 };
 
-void level_order(Node *root)
+void print_level_order(Node *root)
 {
     if (root == NULL)
     {
@@ -115,15 +115,15 @@ bool b_search(Node *root, int x)
 int main()
 {
     Node *root = input_tree(); // 10 5 15 2 6 12 16 -1 3 -1 -1 -1 -1 -1 -1 -1 -1
-    level_order(root);         // 10 5 15 2 6 12 16 3
-
+    print_level_order(root);   // 10 5 15 2 6 12 16 3
+    cout << endl;
     if (b_search(root, 102))
     {
         cout << "Yes, Found" << endl;
     }
     else
     {
-        cout << "No, Not Found" << endl;
+        cout << "No, Not Found" << endl; // true
     }
 
     return 0;

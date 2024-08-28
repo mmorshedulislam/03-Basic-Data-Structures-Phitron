@@ -65,7 +65,7 @@ Node *input_tree()
     return root;
 };
 
-void level_order(Node *root)
+void print_level_order(Node *root)
 {
     if (root == NULL)
     {
@@ -133,7 +133,7 @@ int main()
     b_insert(root, 27);
     b_insert(root, 22);
 
-    level_order(root); // 20 10 30 15 25 35 13 22 27 32
+    print_level_order(root); // 20 10 30 15 25 35 13 22 27 32
 
     return 0;
 }
