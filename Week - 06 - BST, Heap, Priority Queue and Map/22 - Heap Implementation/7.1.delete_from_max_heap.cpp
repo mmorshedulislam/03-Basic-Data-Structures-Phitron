@@ -23,14 +23,14 @@ void insert_max_heap(vector<int> &v, int x)
 
 void delete_max_heap(vector<int> &v)
 {
-    v[0] = v[v.size() - 1];
+    v[0] = v[v.size() - 1]; // set first index = last index
     v.pop_back();
     int cur_idx = 0;
 
     while (true)
     {
-        int left_idx = cur_idx * 2 + 1;
-        int right_idx = cur_idx * 2 + 2;
+        int left_idx = (cur_idx * 2) + 1;
+        int right_idx = (cur_idx * 2) + 2;
         int last_idx = v.size() - 1;
 
         if (left_idx <= last_idx && right_idx <= last_idx)
@@ -107,7 +107,7 @@ int main()
     };
 
     delete_max_heap(v);
-    print_heap(v); // 25 20 6 15 5 3 
+    print_heap(v); // 25 20 6 15 5 3
 
     return 0;
 }

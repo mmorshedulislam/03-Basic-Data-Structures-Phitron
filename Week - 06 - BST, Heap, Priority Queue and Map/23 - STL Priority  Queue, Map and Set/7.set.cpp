@@ -3,10 +3,10 @@ using namespace std;
 
 int main()
 {
-    // why its using?
-    // 1. sorting
-    // 2. duplicate
-    // 3. searching
+    // why it's using?
+    // 1. sorting (auto sort)
+    // 2. duplicate (remove duplicate)
+    // 3. searching (quick search)
 
     set<int> s;
     int n;
@@ -45,6 +45,6 @@ int main()
 // 6
 // 8
 // 10
-//
+// 
 // 1
 // YES

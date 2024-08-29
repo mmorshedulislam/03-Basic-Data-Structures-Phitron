@@ -5,14 +5,14 @@ int main()
 {
     string sentence;
     getline(cin, sentence);
-
     string word;
-    stringstream ss(sentence);
+
     map<string, int> mp;
+    stringstream ss(sentence);
 
     while (ss >> word)
     {
-        mp[word]++; // mp[word] = mp[word] + 1
+        mp[word]++;
     }
 
     for (auto it = mp.begin(); it != mp.end(); it++)
@@ -22,13 +22,3 @@ int main()
 
     return 0;
 }
-
-// input
-// I love cricket we  love cricket they  love cricket
-
-// output
-// I 1
-// cricket 3
-// love 3
-// they 1
-// we 1
