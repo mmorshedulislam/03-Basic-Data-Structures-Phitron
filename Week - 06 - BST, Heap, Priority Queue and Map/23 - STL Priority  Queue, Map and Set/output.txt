@@ -1,5 +1,9 @@
-Tamim 9 85
-Rahim 25 85
-Musfiq 30 89
-Sakib 23 95
-Shanto 36 99
+1
+akib 0
+rahat 100
+shakib al hasan 75
+shamim 79
+tamim 19
+100
+0
+YES

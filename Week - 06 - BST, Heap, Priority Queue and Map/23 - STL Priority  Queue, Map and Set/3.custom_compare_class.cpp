@@ -58,3 +58,18 @@ int main()
 
     return 0;
 }
+
+// input
+// 5
+// Rahim 25 85
+// Shanto 36 99
+// Tamim 9 85
+// Sakib 23 95
+// Musfiq 30 89
+
+// output
+// Tamim 9 85
+// Rahim 25 85
+// Musfiq 30 89
+// Sakib 23 95
+// Shanto 36 99
