@@ -3,23 +3,35 @@ using namespace std;
 
 int main()
 {
+    int t;
+    cin >> t;
+    cin.ignore();
     
-    map<string, int> mp;
-
-    string sentence;
-    getline(cin, sentence);
-
-    string word;
-    stringstream ss(sentence);
-
-    while (ss >> word)
+    while (t--)
     {
-        mp[word]++;
-    }
+        map<string, int> mp;
 
-    for (auto it = mp.begin(); it != mp.end(); it++)
-    {
-        cout << it->first << " " << it->second << endl;
+        string sentence;
+        getline(cin, sentence);
+
+        string word;
+        stringstream ss(sentence);
+
+        string maxWord;
+        int maxCount = 0;
+
+        while (ss >> word)
+        {
+            mp[word]++;
+
+            if (mp[word] > maxCount)
+            {
+                maxCount = mp[word];
+                maxWord = word;
+            }
+        }
+
+        cout << maxWord << " " << maxCount << endl;
     }
 
     return 0;
